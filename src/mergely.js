@@ -1,6 +1,6 @@
 "use strict";
 
-(function(jQuery, CodeMirror) {
+//(function(jQuery, CodeMirror) {
 
 var Mgly = {};
 
@@ -1766,4 +1766,4 @@ jQuery.pluginMaker = function(plugin) {
 // make the mergely widget
 jQuery.pluginMaker(Mgly.mergely);
 
-})(require('jquery'), require('CodeMirror'));
+//})(require('jquery'), require('CodeMirror'));

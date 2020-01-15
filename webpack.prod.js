@@ -4,6 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	mode: 'production',
+	devtool: "source-map",
 	entry: {
 		mergely: './src/mergely.js',
 	},
@@ -11,7 +12,7 @@ module.exports = {
 		path: path.join(__dirname, 'lib'),
 		filename: './[name].js',
 		library: 'mergely',
-		libraryTarget: 'umd',
+		libraryTarget: 'commonjs-module',
 		umdNamedDefine: true
 	},
 	module: {
@@ -26,7 +27,8 @@ module.exports = {
 	},
 	externals: {
 		jquery: 'jQuery',
-		CodeMirror: 'CodeMirror'
+		"v1/ext/CognosExtGit/js/lib/codemirror.js":
+		  "v1/ext/CognosExtGit/js/lib/codemirror.js"
 	},
 	plugins: [
 		new CopyWebpackPlugin([{
